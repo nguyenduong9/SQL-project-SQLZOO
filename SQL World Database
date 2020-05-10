@@ -91,3 +91,10 @@ SELECT name FROM world
   WHERE population >
      (SELECT population FROM world
       WHERE name='Russia')
+
+select name from world 
+where continent = 'Europe'
+And GDP/population >
+(select GDP/population 
+from world
+where name = 'United Kingdom') 
