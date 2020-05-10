@@ -52,3 +52,19 @@ from world
 where (population >=250000000 or area >=3000000) 
 and name in not ('Australia', 'Indonesia', 'China', 'United Kingdom')
 
+Show the name and population in millions and the GDP in billions for the countries of the continent 'South America'. Use the ROUND function to show the values to two decimal places.
+For South America show population in millions and GDP in billions both to 2 decimal places.
+
+*/ 
+select name, round(population/1000000,2) as population, round (GDP/1000000000,2) as GDP
+from world
+where continent = 'South America'
+
+Greece has capital Athens.
+
+Each of the strings 'Greece', and 'Athens' has 6 characters.
+Show the name and capital where the name and the capital have the same number of characters.
+
+Select name, capital 
+from world
+where 
