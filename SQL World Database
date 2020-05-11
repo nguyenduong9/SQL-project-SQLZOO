@@ -98,3 +98,27 @@ And GDP/population >
 (select GDP/population 
 from world
 where name = 'United Kingdom') 
+
+List the name and continent of countries in the continents containing either Argentina or Australia. Order by name of the country.
+*/ 
+select name, continent
+from world
+where continent =(select continent from world where name = 'Argentina')
+or continent = (select continent from world where name ='Australia')
+order by name
+
+Which country has a population that is more than Canada but less than Poland? Show the name and the population.
+*/ 
+select name, population
+ from world
+where
+population > (select population
+from world 
+where name = 'Canada')
+And
+population<(select population 
+from world
+where name = 'Poland') 
+
+Germany (population 80 million) has the largest population of the countries in Europe. Austria (population 8.5 million) has 11% of the population of Germany.
+Show the name and the population of each country in Europe. Show the population as a percentage of the population of Germany.
