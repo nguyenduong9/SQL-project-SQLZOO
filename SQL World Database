@@ -127,6 +127,7 @@ SELECT name, CONCAT(ROUND(population/(SELECT population FROM world WHERE name = 
 FROM world
 WHERE continent = 'Europe
 
+Which countries have a GDP greater than every country in Europe? [Give the name only.] (Some countries may have NULL gdp values)
 */ 
 select name
 from world
